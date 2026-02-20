@@ -319,7 +319,8 @@
 											"            console.warn(\"Contact are missing in the response\");\r",
 											"        } \r",
 											"    } \r",
-											"}"
+											"}\r",
+											")"
 										],
 										"type": "text/javascript",
 										"packages": {},
