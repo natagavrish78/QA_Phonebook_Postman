@@ -301,8 +301,12 @@
 									"listen": "prerequest",
 									"script": {
 										"id": "e8908911-6ecd-4edb-9623-97034e5754e8",
-										"exec": [],
-										"type": "text/javascript"
+										"exec": [
+											"pm.sendRequest"
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
