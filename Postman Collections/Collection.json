@@ -302,7 +302,27 @@
 									"script": {
 										"id": "e8908911-6ecd-4edb-9623-97034e5754e8",
 										"exec": [
-											"pm.sendRequest"
+											"pm.sendRequest({\r",
+											"    url: pm.environment.get(\"BaseURL\") + \"/v1/contacts/\",\r",
+											"    method: \"GET\",\r",
+											"    header: { \"Authorization\": pm.environment.get(\"token\") }\r",
+											"}, function(err,res) {\r",
+											"    if(err) {\r",
+											"        console.log(\"Error while requesting contacts: \", err)\r",
+											"    } else {\r",
+											"        let data = res.json();\r",
+											"        if(data.contacts && data.contacts.length>0) {\r",
+											"            let contactId = data.contacts\r",
+											"            pm.environment.set(\"id\", contactId);\r",
+											"        } else {\r",
+											"            console.log(\"Contact was added: \",contactId);\r",
+											"        } e\r",
+											"    \r",
+											"\r",
+											"        }\r",
+											"    } \r",
+											"\r",
+											"}"
 										],
 										"type": "text/javascript",
 										"packages": {},
